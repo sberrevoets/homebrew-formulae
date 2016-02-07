@@ -11,8 +11,7 @@ class Urlview < Formula
 
     man1.mkpath
     ENV.prepend "CFLAGS", "-I /usr/local/include"
-    system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}",
-                          "--sysconfdir=#{etc}", "--with-pcre"
+    system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}"
     system "make", "install"
   end
 end
